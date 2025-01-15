@@ -11,6 +11,11 @@ git remote remove origin
 
 git remote add origin <내꺼 레포지토리_URL>
 
+git add .
+git commit -m "Initial commit"
+(git branch -M master)
+git push -u origin master
+
 푸시
 git push -u origin master
 
@@ -23,7 +28,16 @@ git push -u origin master
 
 로컬에서 작업한 내용을 원격 저장소로 푸시
 처음 푸시할 때는 -u 옵션을 사용하여 원격 저장소와 로컬 브랜치를 연결
+
 git add .
 git commit -m "Initial commit"
 git push -u origin master
+git push
 
+git push를 처음 푸시할 때는 -u 옵션을 사용하여 원격 저장소와 로컬 브랜치를 연결하는 것이 필요
+그러나 이후에는 한 번 연결된 원격 저장소에 대해 git push만 입력해도 자동으로 푸시
+
+-u 옵션은 로컬 브랜치와 원격 브랜치를 연결
+git push -u origin master를 실행하면, 이후에는 git push만으로도 master 브랜치가 원격 저장소에 푸시
+
+처음 푸시할 때만 -u를 사용하고, 이후에는 git push만 입력
